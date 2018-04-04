@@ -1,7 +1,19 @@
 # 4Nix
-
 參考 sugar, trot, phoenix 用的套件，組 framework
 
+## Usage
+
+add `{:nix4, github: "pct/4nix"}` to your mix.exs:
+
+```elixir
+defp deps do
+  [
+    {:nix4, github: "pct/4nix"}
+  ]
+end
+```   
+
+# Plugs
 - cowboy https://github.com/ninenines/cowboy
 - plug https://github.com/elixir-plug/plug
 
