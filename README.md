@@ -1,12 +1,12 @@
 # 4Nix
 
-參考 sugar, trot, exelli 用的套件，組 framework
+參考 sugar, trot, phoenix 用的套件，組 framework
 
 - cowboy https://github.com/ninenines/cowboy
 - plug https://github.com/elixir-plug/plug
 
 ## from sugar
-- http_router https://github.com/joshbuddy/http_router
+- http_router https://github.com/sugar-framework/elixir-http-router/
 - linguist (i18n) https://github.com/chrismccord/linguist
 - earmark (markdown parser) https://github.com/pragdave/earmark
 - ex_doc (doc) https://github.com/elixir-lang/ex_doc
