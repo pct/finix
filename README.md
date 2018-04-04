@@ -37,6 +37,6 @@ end
 - exi18n (i18n) https://github.com/gvl/exi18n
 
 # TODO
-- server
+- server https://github.com/sugar-framework/sugar/blob/master/lib/mix/tasks/server.ex
 - livereload
 - mix tasks
