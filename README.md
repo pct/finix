@@ -35,3 +35,8 @@ end
 ## Me
 - Slime (slim) https://github.com/slime-lang/slime
 - exi18n (i18n) https://github.com/gvl/exi18n
+
+# TODO
+- server
+- livereload
+- mix tasks
