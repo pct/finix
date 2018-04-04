@@ -19,7 +19,6 @@ end
 
 ## from sugar
 - http_router https://github.com/sugar-framework/elixir-http-router/
-- linguist (i18n) https://github.com/chrismccord/linguist
 - earmark (markdown parser) https://github.com/pragdave/earmark
 - ex_doc (doc) https://github.com/elixir-lang/ex_doc
 - excoveralls (coverage report) https://github.com/parroty/excoveralls
@@ -27,7 +26,6 @@ end
 
 ## from phoenix
 - jason (json) https://github.com/michalmuskala/jason
-- gettext (is8n) https://github.com/elixir-lang/gettext
 - phoenix_html (html) https://github.com/phoenixframework/phoenix_html
 
 ## from trot
@@ -36,3 +34,4 @@ end
 
 ## Me
 - Slime (slim) https://github.com/slime-lang/slime
+- exi18n (i18n) https://github.com/gvl/exi18n
