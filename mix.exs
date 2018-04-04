@@ -6,8 +6,14 @@ defmodule Nix4.MixProject do
       app: :nix4,
       version: "0.1.0",
       elixir: "~> 1.6",
+      name: "4Nix",
+      source_url: "https://github.com/pct/4nix",
+      #homepage_url: "",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package(),
+      docs: [readme: "README.md", main: "README"],
+      test_coverage: [tool: ExCoveralls]
     ]
   end
 
@@ -23,20 +29,27 @@ defmodule Nix4.MixProject do
     [
       {:cowboy, "~> 1.0 or ~> 2.2.2 or ~> 2.3", optional: true},
       {:plug, "~> 1.5.0"},
+      {:ecto, "~> 2.2.9"},
+      {:mariaex, "~> 0.8.4"},
       {:http_router, "~> 0.10.0"},
       {:linguist, "~> 0.1.5"},
-      {:earmark, "~> 1.2.5"},
-      {:ex_doc, "~> 0.18.3"},
-      {:excoveralls, "~> 0.8.1"},
-      {:dialyxir, "~> 0.5.1"},
       {:jason, "~> 1.0.0"},
       {:gettext, "~> 0.15.0"},
       {:phoenix_html, "~> 2.11.1"},
       {:inch_ex, "~> 0.5.4"},
       {:credo, "~> 0.9.0"},
       {:slime, "~> 1.1.0"},
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
+      {:earmark, "~> 1.2.5", only: :docs},
+      {:ex_doc, "~> 0.18.3", only: :docs},
+      {:excoveralls, "~> 0.8.1", only: :test},
+      {:dialyxir, "~> 0.5.1", only: :test},
     ]
+  end
+
+  defp package do
+		%{maintainers: ["Jin-Sih, Lin"],
+			files: ["lib",  "mix.exs", "README.md", "LICENSE"],
+			licenses: ["MIT"],
+			links: %{"GitHub" => "https://github.com/pct/4nix"}}
   end
 end
