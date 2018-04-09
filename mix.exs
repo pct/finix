@@ -33,7 +33,6 @@ defmodule Nix4.MixProject do
       {:mariaex, "~> 0.8.4"},
       {:http_router, "~> 0.10.0"},
       {:jason, "~> 1.0.0"},
-      {:phoenix_html, "~> 2.11.1"},
       {:inch_ex, "~> 0.5.4"},
       {:credo, "~> 0.9.0"},
       {:expug, "~> 0.9"},

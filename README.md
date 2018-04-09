@@ -26,7 +26,6 @@ end
 
 ## from phoenix
 - jason (json) https://github.com/michalmuskala/jason
-- phoenix_html (html) https://github.com/phoenixframework/phoenix_html
 
 ## from trot
 - inch_ex (inline) https://github.com/rrrene/inch_ex
