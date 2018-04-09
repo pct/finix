@@ -33,7 +33,7 @@ end
 - credo (static code analysis) https://github.com/rrrene/credo
 
 ## Me
-- Slime (slim) https://github.com/slime-lang/slime
+- Expug (pug) https://github.com/rstacruz/expug
 - exi18n (i18n) https://github.com/gvl/exi18n
 
 # TODO

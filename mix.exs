@@ -36,7 +36,7 @@ defmodule Nix4.MixProject do
       {:phoenix_html, "~> 2.11.1"},
       {:inch_ex, "~> 0.5.4"},
       {:credo, "~> 0.9.0"},
-      {:slime, "~> 1.1.0"},
+      {:expug, "~> 0.9"},
       {:exi18n, "~> 0.8.0"},
       {:yaml_elixir, "~> 1.3.0"},
       {:earmark, "~> 1.2.5", only: :docs},
