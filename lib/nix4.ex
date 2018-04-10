@@ -1,6 +1,6 @@
-defmodule Nix4 do
+defmodule Finix do
   @moduledoc """
-  Documentation for Nix4.
+  Documentation for Finix.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule Nix4 do
 
   ## Examples
 
-      iex> Nix4.hello
+      iex> Finix.hello
       :world
 
   """

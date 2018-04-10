@@ -1,14 +1,14 @@
-# 4Nix
+# Finix
 參考 sugar, trot, phoenix 用的套件，組 framework
 
 ## Usage
 
-add `{:nix4, github: "pct/4nix"}` to your mix.exs:
+add `{:finix, github: "pct/finix"}` to your mix.exs:
 
 ```elixir
 defp deps do
   [
-    {:nix4, github: "pct/4nix"}
+    {:finix, github: "pct/finix"}
   ]
 end
 ```   

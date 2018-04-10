@@ -1,8 +1,8 @@
-defmodule Nix4Test do
+defmodule FinixTest do
   use ExUnit.Case
-  doctest Nix4
+  doctest Finix
 
   test "greets the world" do
-    assert Nix4.hello() == :world
+    assert Finix.hello() == :world
   end
 end

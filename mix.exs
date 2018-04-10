@@ -1,13 +1,13 @@
-defmodule Nix4.MixProject do
+defmodule Finix.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :nix4,
+      app: :finix,
       version: "0.1.0",
       elixir: "~> 1.6",
-      name: "4Nix",
-      source_url: "https://github.com/pct/4nix",
+      name: "Finix",
+      source_url: "https://github.com/pct/finix",
       #homepage_url: "",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -49,6 +49,6 @@ defmodule Nix4.MixProject do
 		%{maintainers: ["Jin-Sih, Lin"],
 			files: ["lib",  "mix.exs", "README.md", "LICENSE"],
 			licenses: ["MIT"],
-			links: %{"GitHub" => "https://github.com/pct/4nix"}}
+			links: %{"GitHub" => "https://github.com/pct/finix"}}
   end
 end

@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure your application as:
 #
-#     config :nix4, key: :value
+#     config :finix, key: :value
 #
 # and access this configuration in your application as:
 #
-#     Application.get_env(:nix4, :key)
+#     Application.get_env(:finix, :key)
 #
 # You can also configure a 3rd-party app:
 #
