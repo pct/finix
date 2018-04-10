@@ -51,5 +51,4 @@ end
 
 # TODO
 - server https://github.com/sugar-framework/sugar/blob/master/lib/mix/tasks/server.ex
-- livereload
 - mix tasks
