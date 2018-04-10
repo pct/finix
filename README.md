@@ -8,10 +8,23 @@ add `{:finix, github: "pct/finix"}` to your mix.exs:
 ```elixir
 defp deps do
   [
-    {:finix, github: "pct/finix"}
+    {:finix, github: "pct/finix"},
+    {:exsync, "~> 0.2", only: :dev} # if you need auto recompile
   ]
 end
 ```   
+
+add the following code to your `def start` function head if you want to auto recompile
+
+```elixir
+# exsync reload
+case Code.ensure_loaded(ExSync) do
+  {:module, ExSync = mod} ->
+    mod.start()
+  {:error, :nofile} ->
+    :ok
+end
+```
 
 # Plugs
 - cowboy https://github.com/ninenines/cowboy
