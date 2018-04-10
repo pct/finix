@@ -34,6 +34,7 @@ end
 ## Me
 - Expug (pug) https://github.com/rstacruz/expug
 - exi18n (i18n) https://github.com/gvl/exi18n
+- exsync (reload) https://github.com/falood/exsync
 
 # TODO
 - server https://github.com/sugar-framework/sugar/blob/master/lib/mix/tasks/server.ex

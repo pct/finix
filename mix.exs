@@ -42,6 +42,7 @@ defmodule Finix.MixProject do
       {:ex_doc, "~> 0.18.3", only: :docs},
       {:excoveralls, "~> 0.8.1", only: :test},
       {:dialyxir, "~> 0.5.1", only: :test},
+      {:exsync, "~> 0.2", only: :dev}
     ]
   end
 
