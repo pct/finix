@@ -8,11 +8,15 @@ defmodule Finix.Controller do
         apply __MODULE__, opts[:action], [conn, conn.params]
       end
 
-      def render(file_name, params) do
-        __ENV__.file
+      def render(conn, file_name, params) do
+        ret = __ENV__.file
         |> Path.dirname
         |> Path.join(["../views/", file_name])
         |> EEx.eval_file(params)
+
+        conn
+        |> Plug.Conn.put_resp_content_type("text/html")
+        |> Plug.Conn.send_resp(200, ret)
       end
 
     end
