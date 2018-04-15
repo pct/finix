@@ -3,8 +3,6 @@ defmodule Finix.Controller do
     quote do
       import Finix.Controller.Helpers
 
-      plug Plug.Static, from: Finix.Config.get(:finix, :static_path, "priv/static")
-
       def init(opts), do: opts
 
       def call(conn, opts) do
