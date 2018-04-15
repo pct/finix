@@ -15,6 +15,20 @@ defmodule Finix.Controller.Helpers do
     %Plug.Conn{conn | resp_headers: headers, state: :set}
   end
 
+  @spec static(Plug.Conn.t, binary) :: Plug.Conn.t
+  def static(conn, file) do
+    filename = Path.join(["priv/static", file])
+    if File.exists?(filename) do
+      body = filename |> File.read!
+      conn
+      |> put_resp_content_type("text/html")
+      |> send_resp(200, body)
+    else
+      conn
+      |> not_found
+    end
+  end
+
   @spec json(Plug.Conn.t, Keyword.t | list, Keyword.t) :: Plug.Conn.t
   def json(conn, data, opts \\ []) do
     opts = [status: conn.status || 200] |> Keyword.merge(opts)
@@ -27,7 +41,7 @@ defmodule Finix.Controller.Helpers do
     end
 
     conn
-      |> send_resp(opts[:status], Poison.encode! data)
+    |> send_resp(opts[:status], Poison.encode! data)
   end
 
   @spec raw(Plug.Conn.t) :: Plug.Conn.t
@@ -38,7 +52,7 @@ defmodule Finix.Controller.Helpers do
   @spec render(Plug.Conn.t, binary | Keyword.t | nil, Keyword.t, Keyword.t) :: Plug.Conn.t
   def render(conn, template \\ nil, assigns \\ [], opts \\ [])
   def render(conn, template, assigns, opts) when is_atom(template)
-                                              or is_binary(template) do
+  or is_binary(template) do
     template = build_template_key(conn, template)
     render_view(conn, template, assigns, opts)
   end
@@ -51,13 +65,13 @@ defmodule Finix.Controller.Helpers do
   def halt!(conn, opts \\ []) do
     opts = [status: 401, message: ""] |> Keyword.merge(opts)
     conn
-      |> send_resp(opts[:status], opts[:message])
+    |> send_resp(opts[:status], opts[:message])
   end
 
   @spec not_found(Plug.Conn.t, binary) :: Plug.Conn.t
   def not_found(conn, message \\ "Not Found") do
     conn
-      |> send_resp(404, message)
+    |> send_resp(404, message)
   end
 
   @spec forward(Plug.Conn.t, atom, atom, Keyword.t) :: Plug.Conn.t
@@ -69,8 +83,8 @@ defmodule Finix.Controller.Helpers do
   def redirect(conn, location, opts \\ []) do
     opts = [status: 302] |> Keyword.merge(opts)
     conn
-      |> put_resp_header("location", location)
-      |> send_resp(opts[:status], "")
+    |> put_resp_header("location", location)
+    |> send_resp(opts[:status], "")
   end
 
   defp build_template_key(conn, template \\ nil) do
@@ -78,11 +92,11 @@ defmodule Finix.Controller.Helpers do
     template = template || default
 
     controller = "#{Map.get(conn.private, :controller, "")}"
-                  |> String.split(".")
-                  |> List.last
-                  |> String.downcase
+                 |> String.split(".")
+                 |> List.last
+                 |> String.downcase
 
-     "#{controller}/#{template}"
+    "#{controller}/#{template}"
   end
 
   defp render_view(conn, template_key, assigns, opts) do
@@ -96,10 +110,10 @@ defmodule Finix.Controller.Helpers do
     end
 
     html = Finix.Config.get(:finix, :views_path, "lib/web/views")
-      |> Path.join("#{template_key}.eex")
-      |> EEx.eval_file(assigns)
+           |> Path.join("#{template_key}.eex")
+           |> EEx.eval_file(assigns)
 
     conn
-      |> send_resp(opts[:status], html)
+    |> send_resp(opts[:status], html)
   end
 end
