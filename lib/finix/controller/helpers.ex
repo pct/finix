@@ -95,7 +95,7 @@ defmodule Finix.Controller.Helpers do
       conn
     end
 
-    html = Finix.Config.get(:finix, :views_path, "lib/#{Mix.Project.config[:app]}/views")
+    html = Finix.Config.get(:finix, :views_path, "lib/web/views")
       |> Path.join("#{template_key}.eex")
       |> EEx.eval_file(assigns)
 
