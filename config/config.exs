@@ -28,3 +28,8 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+#
+
+config :finix,
+  views_path: "lib/web/views"
+  static_path: "priv/static"
