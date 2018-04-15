@@ -1,4 +1,5 @@
-defmodule Sugar.Controller.Helpers do
+# https://github.com/sugar-framework/sugar/blob/master/lib/sugar/controller/helpers.ex
+defmodule Finix.Controller.Helpers do
   @type status_code :: 100..999
   @type headers :: [{binary, binary}]
 
