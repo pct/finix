@@ -31,5 +31,5 @@ use Mix.Config
 #
 
 config :finix,
-  views_path: "lib/web/views"
+  views_path: "lib/web/views",
   static_path: "priv/static"
